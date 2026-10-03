@@ -1,0 +1,741 @@
+css
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #182033;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 7%;
+
+    background: white;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav {
+    display:flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: #182033;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: #4f46e5;
+}
+
+.cart-button {
+    background: #4f46e5;
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.cart-button:hover {
+    background: #3730a3;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 600px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    padding: 70px 8%;
+
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #ffffff
+    );
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.small-heading {
+    color: #4f46e5;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 75px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #4f46e5;
+}
+
+.hero p {
+    font-size: 18px;
+
+    color: #5b6475;
+
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.primary-button {
+    background: #4f46e5;
+
+    color: white;
+}
+
+.secondary-button {
+    border: 2px solid #4f46e5;
+
+    color: #4f46e5;
+}
+
+.primary-button:hover {
+    background: #3730a3;
+
+    transform: translateY(-3px);
+}
+
+.secondary-button:hover {
+    background: #4f46e5;
+
+    color: white;
+}
+
+
+.hero-product {
+    display: flex;
+
+    justify-content: center;
+}
+
+.product-circle {
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 150px;
+
+    background: white;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.4s;
+}
+
+.product-circle:hover {
+    transform: scale(1.05) rotate(3deg);
+}
+
+
+/* =========================
+   BENEFITS
+========================= */
+
+.benefits {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    padding: 35px 8%;
+
+    background: white;
+}
+
+.benefit {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.benefit span {
+    font-size: 30px;
+}
+
+.benefit h3 {
+    font-size: 17px;
+}
+
+.benefit p {
+    color: #687184;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products-section {
+    padding: 80px 8%;
+}
+
+.section-heading {
+    margin-bottom: 35px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+}
+
+
+/* PRODUCT GRID */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* PRODUCT CARD */
+
+.product-card {
+    background: white;
+
+    border-radius: 15px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* PRODUCT IMAGE */
+
+.product-image {
+    height: 230px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+    background: #eef2ff;
+
+    font-size: 100px;
+}
+
+
+/* BADGE */
+
+.badge {
+    position:absolute;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.badge.sale {
+    background: #e11d48;
+}
+
+
+/* PRODUCT INFORMATION */
+
+.product-info {
+    padding: 22px;
+}
+
+.category {
+    color: #737b8c;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.product-info h3 {
+    font-size: 20px;
+
+    margin: 6px 0;
+}
+
+.rating {
+    color: #f59e0b;
+
+    margin-bottom: 12px;
+}
+
+.rating span {
+    color: #8991a0;
+
+    font-size: 13px;
+}
+
+.description {
+    color: #697386;
+
+    font-size: 14px;
+
+    min-height: 48px;
+}
+
+
+/* PRICE + BUTTON */
+
+.product-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.product-bottom strong {
+    font-size: 22px;
+}
+
+.add-button {
+    background: #182033;
+
+    color: white;
+
+    padding: 10px 14px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+}
+
+.add-button:hover {
+    background: #4f46e5;
+}
+
+
+/* =========================
+   DEAL
+========================= */
+
+.deal {
+    margin: 20px 8% 80px;
+
+    padding: 55px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: #182033;
+
+    color: white;
+}
+
+.deal h2 {
+    font-size: 40px;
+
+    max-width: 650px;
+
+    margin-bottom: 15px;
+}
+
+.deal p {
+    color: #c5cad5;
+
+    margin-bottom: 25px;
+}
+
+.deal .primary-button {
+    background: white;
+
+    color: #182033;
+}
+
+.deal-icon {
+    font-size: 120px;
+}
+
+
+/* =========================
+   CONTACT / NEWSLETTER
+========================= */
+
+.newsletter {
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background: white;
+}
+
+.newsletter h2 {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+    color: #687184;
+
+    margin-bottom: 25px;
+}
+
+.newsletter form {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+.newsletter label {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    overflow: hidden;
+}
+
+.newsletter input {
+    flex: 1;
+
+    padding: 15px;
+
+    border: 1px solid #0247e8;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    outline: #4f46e5;
+}
+
+.newsletter input:focus {
+    border-color: #4f46e5;
+
+    box-shadow:
+        0 0 0 3px #e0e7ff;
+}
+
+.newsletter button {
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background: #3730a3;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #111827;
+
+    color: white;
+
+    padding: 50px 8% 20px;
+}
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+.footer-content h3 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.footer-content h4 {
+    margin-bottom: 10px;
+}
+
+.footer-content p {
+    color: #aeb6c5;
+}
+
+.footer-content a {
+    display: block;
+
+    color: #aeb6c5;
+
+    margin-bottom: 5px;
+}
+
+.footer-content a:hover {
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+
+    border-top: 1px solid #374151;
+
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    color: #9ca3af;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-product {
+        margin-top: 40px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .nav {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        gap: 15px;
+
+        font-size: 14px;
+    }
+
+
+    .benefits {
+        grid-template-columns: 1fr;
+    }
+
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .hero {
+        padding: 50px 6%;
+    }
+
+
+    .product-circle {
+        width: 250px;
+        height: 250px;
+
+        font-size: 100px;
+    }
+
+
+    .deal {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 40px 25px;
+    }
+
+
+    .deal h2 {
+        font-size: 30px;
+    }
+
+
+    .deal-icon {
+        margin-top: 20px;
+    }
+
+
+    .newsletter form {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+
+    .newsletter input,
+    .newsletter button {
+        width: 100%;
+    }
+
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+}
+```
